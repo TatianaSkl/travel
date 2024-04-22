@@ -4,12 +4,205 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+:root {
+  --bgGradient: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%);
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
 }
 
 body {
-  background-color: #fafafa;
+  font-family: 'Inter', sans-serif;
+  background-color: #d9d9d9;
+  color: #ffffff;
+  font-style: normal;
+  min-height: 100vh;
+  max-width: 100%;
+  @apply text-[14px] m:text-[16px] l:text-[18px];
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@layer components {
+  .hero-bg-m {
+    margin: 0 auto;
+    height: 642px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: var(--bgGradient), url(/images/hero_m.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/hero_m_2x.jpg);
+    }
+  }
+
+  .hero-bg-t {
+    height: 531px;
+    background-image: var(--bgGradient), url(/images/hero_t.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/hero_t_2x.jpg);
+    }
+  }
+
+  .hero-bg-d {
+    height: 763px;
+    background-image: var(--bgGradient), url(/images/hero_d.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/hero_d_2x.jpg);
+    }
+  }
+
+  .about-bg-m {
+    margin: 0 auto;
+    height: 873px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: var(--bgGradient), url(/images/about_m.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/about_m_2x.jpg);
+    }
+  }
+
+  .about-bg-t {
+    height: 697px;
+    background-image: var(--bgGradient), url(/images/about_t.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/about_t_2x.jpg);
+    }
+  }
+  .about-bg-d {
+    height: 826px;
+    background-image: var(--bgGradient), url(/images/about_d.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/about_d_2x.jpg);
+    }
+  }
+
+  .career-bg-m {
+    margin: 0 auto;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: var(--bgGradient), url(/images/career_m.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/career_m_2x.jpg);
+    }
+  }
+
+  .career-bg-t {
+    height: 720px;
+    background-image: var(--bgGradient), url(/images/career_t.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/career_t_2x.jpg);
+    }
+  }
+  .career-bg-d {
+    height: 818px;
+    background-image: var(--bgGradient), url(/images/career_d.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/career_d_2x.jpg);
+    }
+  }
+
+  .gallery-bg-m {
+    margin: 0 auto;
+    height: 801px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: var(--bgGradient), url(/images/gallery_bg_m.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/gallery_bg_m_2x.jpg);
+    }
+  }
+
+  .gallery-bg-t {
+    height: 575px;
+    background-image: var(--bgGradient), url(/images/gallery_bg_t.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/gallery_bg_t_2x.jpg);
+    }
+  }
+  .gallery-bg-d {
+    height: 788px;
+    background-image: var(--bgGradient), url(/images/gallery_bg_d.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/gallery_bg_d_2x.jpg);
+    }
+  }
+
+  .contacts-bg-m {
+    margin: 0 auto;
+    height: 856px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: var(--bgGradient), url(/images/contacts_m.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/contacts_m_2x.jpg);
+    }
+  }
+
+  .contacts-bg-t {
+    height: 691px;
+    background-image: var(--bgGradient), url(/images/contacts_t.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/contacts_t_2x.jpg);
+    }
+  }
+  .contacts-bg-d {
+    height: 762px;
+    background-image: var(--bgGradient), url(/images/contacts_d.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/contacts_d_2x.jpg);
+    }
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply w-full mx-auto px-5 s:w-[480px] m:px-8 m:w-[768px] l:px-6 l:w-[1280px];
+  }
+
+  .section {
+    @apply py-14 m:py-16 l:py-20;
+  }
+
+  .title {
+    @apply uppercase text-[40px] font-thin leading-[1.4] tracking-[-1.6px] m:leading-[1.2] m:text-[67px] m:tracking-[-2.68px] l:text-[98px] l:tracking-[-3.92px];
+  }
+
+  .titleAccent {
+    @apply font-medium;
+  }
 }
