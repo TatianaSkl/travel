@@ -56,7 +56,6 @@ img {
 @layer components {
   .hero-bg-m {
     margin: 0 auto;
-    height: 642px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -220,5 +219,53 @@ img {
 
   .trans {
     @apply transition duration-300;
+  }
+
+  .hero-btn::before {
+    content: '';
+    position: absolute;
+    width: 42px;
+    height: 53px;
+    top: 0;
+    left: 0;
+    background-image: url('/icons/frame_l_m.svg');
+  }
+
+  .hero-btn::after {
+    content: '';
+    position: absolute;
+    width: 42px;
+    height: 53px;
+    top: 0;
+    right: 0;
+    background-image: url('/icons/frame_r_m.svg');
+  }
+
+  @media (min-width: 768px) {
+    .hero-btn::before {
+      width: 35px;
+      height: 50px;
+      background-image: url('/icons/frame_l_t.svg');
+    }
+
+    .hero-btn::after {
+      width: 35px;
+      height: 50px;
+      background-image: url('/icons/frame_r_t.svg');
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .hero-btn::before {
+      width: 44px;
+      height: 71px;
+      background-image: url('/icons/frame_l_d.svg');
+    }
+
+    .hero-btn::after {
+      width: 44px;
+      height: 71px;
+      background-image: url('/icons/frame_r_d.svg');
+    }
   }
 }
