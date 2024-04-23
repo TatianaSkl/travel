@@ -1,9 +1,10 @@
 'use client';
 
+import { FC } from 'react';
 import { TitleSection } from '@/components/ui-kit';
 import about from '@/data/about.json';
 
-const About = () => {
+const About: FC = () => {
   return (
     <section className="section about-bg-m m:about-bg-t l:about-bg-d" id="about">
       <div className="container">

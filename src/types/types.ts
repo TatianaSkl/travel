@@ -3,6 +3,10 @@ export type headingType = {
   textAccent: string;
 };
 
-export type textType = {
-  text: string;
-};
+export interface NavBarProps {
+  onClose?: () => void;
+}
+
+export interface MobileMenuProps {
+  onClose: () => void;
+}
