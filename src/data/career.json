@@ -1,0 +1,44 @@
+{
+  "title": "Choose ",
+  "titleAccent": "US",
+  "description": "Your chance to join our passionate team in Carpathian tourism. Seeking talented professionals to share our common mission.",
+  "question": "Why us ?",
+  "info": [
+    {
+      "id": "1",
+      "title": "Professional development",
+      "text": "We offer growth opportunities and a creative environment to nurture your talents."
+    },
+    {
+      "id": "2",
+      "title": "Teamwork",
+      "text": "Join our close-knit family, where support and inspiration abound."
+    },
+    {
+      "id": "3",
+      "title": "Stimulating work environment",
+      "text": "Flexibility and remote options for a comfortable experience."
+    },
+    {
+      "id": "4",
+      "title": "Exciting challenges",
+      "text": "Unleash your potential through unforgettable projects showcasing Carpathian beauty."
+    }
+  ],
+  "text": ["Don't miss your opportunity! ", "Fill out the form right now and join our team!"],
+  "labels": {
+    "fullName": "Full name",
+    "email": "E-mail",
+    "position": "Position",
+    "phone": "Phone",
+    "message": "Message",
+    "policy": "I confirm my consent to the processing of personal data."
+  },
+  "placeholder": {
+    "fullName": "John Smith",
+    "email": "johnsmith@email.com",
+    "position": "Movie maker",
+    "phone": "(097) 12 34 567"
+  },
+  "btnSubmit": "Send"
+}

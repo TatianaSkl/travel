@@ -12,7 +12,7 @@ const Logo: FC = () => {
         height={21}
         className="mb-0.5"
       />
-      <p className="logo-text">CarpTravel</p>
+      <p className="font-['Karantina'] tracking-[2.59px] m:text-[14px] l:text-[14px]">CarpTravel</p>
     </a>
   );
 };

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Toaster } from 'react-hot-toast';
 import { Header } from '@/components';
 import './globals.css';
 
@@ -27,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Header />
         {children}
-        {/* <ToastContainer autoClose={2500} /> */}
+        <Toaster />
       </body>
     </html>
   );

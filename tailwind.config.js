@@ -4,6 +4,7 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/ui-kit/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/modules/**/*.{js,ts,jsx,tsx,mdx}',
     './src/sections/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -14,6 +15,9 @@ module.exports = {
         m: '768px',
         l: '1280px',
         xl: '1440px',
+      },
+      colors: {
+        red: '#FF5757',
       },
     },
   },
