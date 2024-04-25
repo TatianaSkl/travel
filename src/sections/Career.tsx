@@ -3,7 +3,7 @@
 import { FC } from 'react';
 import { TitleSection } from '@/components/ui-kit';
 import career from '@/data/career.json';
-import FormCareer from '@/components/modules/FormCareer';
+import { FormCareer } from '@/components/modules';
 
 const Career: FC = () => {
   return (

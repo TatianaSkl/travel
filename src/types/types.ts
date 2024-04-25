@@ -15,11 +15,14 @@ export interface BtnProps {
   text: string;
 }
 
-export interface CareerForm {
-  fullName: string;
-  email: string;
+export interface CareerForm extends ContactsForm {
   position?: string;
   phone: string;
-  message?: string;
   policy: boolean;
+}
+
+export interface ContactsForm {
+  fullName: string;
+  email: string;
+  message?: string;
 }

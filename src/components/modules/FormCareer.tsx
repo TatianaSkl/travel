@@ -13,7 +13,7 @@ const FormCareer: FC = () => {
     formState: { errors },
   } = useForm<CareerForm>();
 
-  const submit: SubmitHandler<CareerForm> = data => {
+  const submit: SubmitHandler<CareerForm> = () => {
     toast.success('Your data has been sent successfully!');
     reset();
   };

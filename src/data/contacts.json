@@ -1,0 +1,53 @@
+{
+  "title": "Contact ",
+  "titleAccent": "US",
+  "phone": {
+    "title": "Phone number",
+    "numbers": ["+38 (098) 12 34 567 ", "+38 (073) 12 34 567"]
+  },
+  "email": {
+    "title": "E-mail",
+    "address": "support@carptravel.com"
+  },
+  "social": {
+    "title": "Follow us",
+    "links": [
+      {
+        "id": "1",
+        "title": "facebook",
+        "link": "https://www.facebook.com/"
+      },
+      {
+        "id": "2",
+        "title": "instagram",
+        "link": "https://www.instagram.com"
+      },
+      {
+        "id": "3",
+        "title": "youtube",
+        "link": "https://www.youtube.com/"
+      },
+      {
+        "id": "4",
+        "title": "tiktok",
+        "link": "https://www.tiktok.com/"
+      }
+    ]
+  },
+  "form": {
+    "fullName": {
+      "label": "Full name",
+      "placeholder": "John Smith",
+      "error": "Incorrect name"
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "johnsmith@email.com",
+      "error": "Invalid email"
+    },
+    "message": {
+      "label": "Message"
+    }
+  },
+  "btnSubmit": "Send"
+}
