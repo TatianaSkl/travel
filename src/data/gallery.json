@@ -1,0 +1,38 @@
+{
+  "title": "OUR ",
+  "titleAccent": "GALLERY",
+  "slider": [
+    {
+      "id": "1",
+      "src": "/images/gallery_1.jpg",
+      "alt": "lake"
+    },
+    {
+      "id": "2",
+      "src": "/images/gallery_2.jpg",
+      "alt": "forest"
+    },
+    {
+      "id": "3",
+      "src": "/images/gallery_3.jpg",
+      "alt": "mountains"
+    },
+    {
+      "id": "4",
+      "src": "/images/gallery_1.jpg",
+      "alt": "lake"
+    },
+    {
+      "id": "5",
+      "src": "/images/gallery_2.jpg",
+      "alt": "forest"
+    },
+    {
+      "id": "6",
+      "src": "/images/gallery_3.jpg",
+      "alt": "mountains"
+    }
+  ],
+  "btnBack": "BACK",
+  "btnNext": "NEXT"
+}
