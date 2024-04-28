@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  --bgGradient: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%);
+  --bgGradient: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5));
   --bgModal: rgba(1, 10, 5, 0.75);
 }
 
@@ -17,48 +17,70 @@
   padding: 0;
   margin: 0;
 }
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a1813;
+    color: #ffffff;
+    font-style: normal;
+    min-height: 100vh;
+    max-width: 100%;
+    @apply text-[14px] m:text-[16px] l:text-[18px];
+  }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #d9d9d9;
-  color: #ffffff;
-  font-style: normal;
-  min-height: 100vh;
-  max-width: 100%;
-  @apply text-[14px] m:text-[16px] l:text-[18px];
-}
+  ul,
+  ol {
+    list-style: none;
+  }
 
-ul,
-ol {
-  list-style: none;
-}
+  button {
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+  }
 
-button {
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
-}
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @layer components {
-  .hero-bg-m {
+  .container {
+    @apply w-full mx-auto px-5 s:w-[480px] m:px-8 m:w-[768px] l:px-6 l:w-[1280px];
+  }
+
+  .section {
+    @apply py-14 m:py-16 l:py-[104px];
+  }
+
+  .modal {
+    background: var(--bgModal);
+    backdrop-filter: blur(25px);
+    @apply fixed z-20 w-full h-screen top-0 left-0 flex justify-center items-center;
+  }
+
+  .hero-bg-m,
+  .about-bg-m,
+  .career-bg-m,
+  .gallery-bg-m,
+  .contacts-bg-m {
     margin: 0 auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+
+  .hero-bg-m {
     background-image: var(--bgGradient), url(/images/hero_m.jpg);
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: var(--bgGradient), url(/images/hero_m_2x.jpg);
@@ -81,11 +103,57 @@ img {
     }
   }
 
+  .hero-btn::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    width: 42px;
+    height: 53px;
+    top: 0;
+    left: 0;
+    background-image: url('/icons/frame_l_m.svg');
+  }
+
+  .hero-btn::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    width: 42px;
+    height: 53px;
+    top: 0;
+    right: 0;
+    background-image: url('/icons/frame_r_m.svg');
+  }
+
+  @media (min-width: 768px) {
+    .hero-btn::before {
+      width: 35px;
+      height: 50px;
+      background-image: url('/icons/frame_l_t.svg');
+    }
+
+    .hero-btn::after {
+      width: 35px;
+      height: 50px;
+      background-image: url('/icons/frame_r_t.svg');
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .hero-btn::before {
+      width: 44px;
+      height: 71px;
+      background-image: url('/icons/frame_l_d.svg');
+    }
+
+    .hero-btn::after {
+      width: 44px;
+      height: 71px;
+      background-image: url('/icons/frame_r_d.svg');
+    }
+  }
+
   .about-bg-m {
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     background-image: var(--bgGradient), url(/images/about_m.jpg);
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: var(--bgGradient), url(/images/about_m_2x.jpg);
@@ -108,11 +176,19 @@ img {
     }
   }
 
+  .services-btn::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    background-image: url('/icons/rectangle.svg');
+    background-color: #ffffff;
+  }
+
   .career-bg-m {
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     background-image: var(--bgGradient), url(/images/career_m.jpg);
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: var(--bgGradient), url(/images/career_m_2x.jpg);
@@ -135,12 +211,55 @@ img {
     }
   }
 
+  .input-form {
+    @apply bg-white/[.05] text-[13px] font-extralight leading-[24px] outline-none placeholder:text-white/20 hover:bg-white/10 focus:bg-white/10 transition duration-300 m:w-[222px] l:w-[290px] l:text-[20px];
+  }
+
+  .label-form {
+    @apply text-[12px] font-extralight leading-[24px] tracking-[2.4px];
+  }
+
+  .input-checkbox:checked + label::before {
+    width: 22px;
+    height: 22px;
+    background-image: url('/icons/checked.svg');
+  }
+
+  .label-checkbox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background-image: url('/icons/unchecked.svg');
+  }
+
+  .error::before {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: -22px;
+    width: 18px;
+    height: 18px;
+    background-image: url('/icons/error.svg');
+  }
+
+  @media (min-width: 1280px) {
+    .input-checkbox:checked + label::before {
+      width: 24px;
+      height: 24px;
+      background-image: url('/icons/checked_d.svg');
+    }
+
+    .label-checkbox::before {
+      width: 24px;
+      height: 24px;
+      background-image: url('/icons/unchecked_d.svg');
+    }
+  }
+
   .gallery-bg-m {
-    margin: 0 auto;
-    height: 801px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     background-image: var(--bgGradient), url(/images/gallery_bg_m.jpg);
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: var(--bgGradient), url(/images/gallery_bg_m_2x.jpg);
@@ -161,40 +280,6 @@ img {
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: var(--bgGradient), url(/images/gallery_bg_d_2x.jpg);
     }
-  }
-
-  .contacts-bg-m {
-    margin: 0 auto;
-    height: 856px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: var(--bgGradient), url(/images/contacts_m.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: var(--bgGradient), url(/images/contacts_m_2x.jpg);
-    }
-  }
-
-  .contacts-bg-t {
-    height: 691px;
-    background-image: var(--bgGradient), url(/images/contacts_t.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: var(--bgGradient), url(/images/contacts_t_2x.jpg);
-    }
-  }
-
-  .contacts-bg-d {
-    height: 762px;
-    background-image: var(--bgGradient), url(/images/contacts_d.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: var(--bgGradient), url(/images/contacts_d_2x.jpg);
-    }
-  }
-
-  .modal {
-    background: var(--bgModal);
-    backdrop-filter: blur(25px);
-    @apply fixed z-20 w-full h-screen top-0 left-0 flex justify-center items-center;
   }
 
   @media (min-width: 768px) {
@@ -230,114 +315,33 @@ img {
       height: 429px !important;
     }
   }
+
+  .contacts-bg-m {
+    background-image: var(--bgGradient), url(/images/contacts_m.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/contacts_m_2x.jpg);
+    }
+  }
+
+  .contacts-bg-t {
+    height: 691px;
+    background-image: var(--bgGradient), url(/images/contacts_t.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/contacts_t_2x.jpg);
+    }
+  }
+
+  .contacts-bg-d {
+    height: 762px;
+    background-image: var(--bgGradient), url(/images/contacts_d.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: var(--bgGradient), url(/images/contacts_d_2x.jpg);
+    }
+  }
 }
 
 @layer utilities {
-  .container {
-    @apply w-full mx-auto px-5 s:w-[480px] m:px-8 m:w-[768px] l:px-6 l:w-[1280px];
-  }
-
-  .section {
-    @apply py-14 m:py-16 l:py-[104px];
-  }
-
   .trans {
     @apply transition duration-300;
-  }
-
-  .input-form {
-    @apply bg-white/[.05] text-[13px] font-extralight leading-[24px] outline-none placeholder:text-white/20 hover:bg-white/10 focus:bg-white/10 transition duration-300 m:w-[222px] l:w-[290px] l:text-[20px];
-  }
-
-  .label-form {
-    @apply text-[12px] font-extralight leading-[24px] tracking-[2.4px];
-  }
-
-  .hero-btn::before {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    width: 42px;
-    height: 53px;
-    top: 0;
-    left: 0;
-    background-image: url('/icons/frame_l_m.svg');
-  }
-
-  .hero-btn::after {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    width: 42px;
-    height: 53px;
-    top: 0;
-    right: 0;
-    background-image: url('/icons/frame_r_m.svg');
-  }
-
-  .input-checkbox:checked + label::before {
-    width: 22px;
-    height: 22px;
-    background-image: url('/icons/checked.svg');
-  }
-
-  .label-checkbox::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 22px;
-    height: 22px;
-    background-image: url('/icons/unchecked.svg');
-  }
-
-  .error::before {
-    content: '';
-    position: absolute;
-    bottom: 4px;
-    left: -22px;
-    width: 18px;
-    height: 18px;
-    background-image: url('/icons/error.svg');
-  }
-
-  @media (min-width: 768px) {
-    .hero-btn::before {
-      width: 35px;
-      height: 50px;
-      background-image: url('/icons/frame_l_t.svg');
-    }
-
-    .hero-btn::after {
-      width: 35px;
-      height: 50px;
-      background-image: url('/icons/frame_r_t.svg');
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .hero-btn::before {
-      width: 44px;
-      height: 71px;
-      background-image: url('/icons/frame_l_d.svg');
-    }
-
-    .hero-btn::after {
-      width: 44px;
-      height: 71px;
-      background-image: url('/icons/frame_r_d.svg');
-    }
-
-    .input-checkbox:checked + label::before {
-      width: 24px;
-      height: 24px;
-      background-image: url('/icons/checked_d.svg');
-    }
-
-    .label-checkbox::before {
-      width: 24px;
-      height: 24px;
-      background-image: url('/icons/unchecked_d.svg');
-    }
   }
 }

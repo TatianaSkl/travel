@@ -3,7 +3,7 @@
 import { FC } from 'react';
 import { TitleSection } from '@/components/ui-kit';
 import gallery from '@/data/gallery.json';
-import SliderGallery from '@/components/modules/SliderGallery';
+import { SliderGallery } from '@/components/modules';
 
 const Gallery: FC = () => {
   return (

@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import Image from 'next/image';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import gallery from '@/data/gallery.json';
 
 const SliderGallery: FC = () => {

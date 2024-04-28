@@ -17,7 +17,7 @@ const NavBar: FC<NavBarProps> = ({ onClose }) => {
               smooth={true}
               duration={500}
               onClick={onClose}
-              className="text-[18px] tracking-[1.8px] leading-[1.2] m:text-[14px] m:tracking-[1.4px] hover:underline focus:underline trans"
+              className="text-[18px] tracking-[1.8px] leading-[1.2] m:text-[14px] m:tracking-[1.4px] hover:underline focus:underline transition duration-300"
               aria-label={`Navigate to ${title} section`}
             >
               {title}

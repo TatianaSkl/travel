@@ -1,0 +1,78 @@
+{
+  "title": "WE ",
+  "titleAccent": "OFFER",
+  "slider": [
+    {
+      "id": "1",
+      "url": "/images/services_bg_1.jpg",
+      "src": "/images/services_1.jpg",
+      "alt": "person riding an ATV on a forest trail",
+      "date": ["01/", "05"],
+      "slogan": "Feel the adrenaline rush",
+      "sloganPaddingTop": 0,
+      "description": "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains."
+    },
+    {
+      "id": "2",
+      "url": "/images/services_bg_2.jpg",
+      "src": "/images/services_2.jpg",
+      "alt": "two people running on a mountain forest trail, one of them holding trekking poles",
+      "date": ["02/", "05"],
+      "slogan": "Destroy your limitations",
+      "sloganPaddingTop": 44,
+      "description": "Overcome the peaks of the Carpathians in a unique way - climbing. Make your own way to the heights and find inner peace in the embrace of the mighty rocks."
+    },
+    {
+      "id": "3",
+      "url": "/images/services_bg_3.jpg",
+      "src": "/images/services_3.jpg",
+      "alt": "hot air balloon flies over a lush vineyard",
+      "date": ["03/", "05"],
+      "slogan": "Get Inspired",
+      "sloganPaddingTop": 92,
+      "description": "Feel Zen over the mountain peaks! Hot air ballooning gives you incredible impressions and panoramas of the Carpathians that seem endless."
+    },
+    {
+      "id": "4",
+      "url": "/images/services_bg_4.jpg",
+      "src": "/images/services_4.jpg",
+      "alt": "two skydivers soaring through the sky, one accompanied by an instructor",
+      "date": ["04/", "05"],
+      "slogan": "Overcome your fears",
+      "sloganPaddingTop": 164,
+      "description": "Fly in the sky over the Carpathians! Experienced instructors will help you realize your dream of free flight. Remember the incredible emotions and panoramas from a bird's eye view forever."
+    },
+    {
+      "id": "5",
+      "url": "/images/services_bg_5.jpg",
+      "src": "/images/services_5.jpg",
+      "alt": "a group of people rafting on an inflatable boat down a turbulent mountain river",
+      "date": ["05/", "05"],
+      "slogan": "Trust the flow",
+      "sloganPaddingTop": 212,
+      "description": "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains."
+    }
+  ],
+  "listText": [
+    {
+      "id": "1",
+      "title": "ATVs Traveling"
+    },
+    {
+      "id": "2",
+      "title": "Rock climbing"
+    },
+    {
+      "id": "3",
+      "title": "Hot air<br>ballooning"
+    },
+    {
+      "id": "4",
+      "title": "Skydiving"
+    },
+    {
+      "id": "5",
+      "title": "Rafting"
+    }
+  ]
+}
