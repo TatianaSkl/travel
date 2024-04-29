@@ -13,6 +13,7 @@ module.exports = {
         s: '480px',
         md: { max: '767px' },
         m: '768px',
+        ml: { max: '1279px' },
         l: '1280px',
         xl: '1440px',
       },

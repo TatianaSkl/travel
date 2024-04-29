@@ -7,6 +7,7 @@ import { TitleSection } from '@/components/ui-kit';
 import 'swiper/css/effect-fade';
 import services from '@/data/services.json';
 import Image from 'next/image';
+import ServicesList from '../ServicesList';
 
 const SliderServices: FC = () => {
   const swiperRef = useRef<any>(null);
@@ -21,7 +22,7 @@ const SliderServices: FC = () => {
 
   return (
     <Swiper effect={'fade'} modules={[EffectFade]} ref={swiperRef}>
-      {services.slider.map(({ id, url, src, alt, date, slogan, sloganPaddingTop, description }) => (
+      {services.slider.map(({ id, url, src, alt, date, slogan, description }) => (
         <SwiperSlide
           key={id}
           style={{
@@ -48,31 +49,14 @@ const SliderServices: FC = () => {
               />
               <div className="l:w-[605px]">
                 <div className="m:flex m:flex-col-reverse m:gap-1 l:flex-row-reverse l:justify-between">
-                  <p
-                    className={`text-right text-[12px] font-extralight leading-[24px] tracking-[2.4px] mb-6 m:text-left m:mb-[34px] l:mb-0 l:pr-[105px] l:pt-[${sloganPaddingTop}px]`}
-                  >
+                  <p className="text-right text-[12px] font-extralight leading-[24px] tracking-[2.4px] mb-6 m:text-left m:mb-[34px] l:hidden">
                     {slogan}
                   </p>
-                  <ul className="flex flex-col gap-4 mb-9 m:mb-6 l:gap-6">
-                    {services.listText.map(({ id, title }, index) => (
-                      <li
-                        key={id}
-                        className="text-white/50 font-extralight text-[20px] leading-[17px] relative m:text-[22px] m:leading-[18px] l:text-[28px] l:leading-[24px]"
-                      >
-                        <button
-                          type="button"
-                          aria-label={`go to page about ${title}`}
-                          dangerouslySetInnerHTML={{ __html: title }}
-                          className={`uppercase text-left trans hover:pl-2 hover:text-white ${
-                            activeIndex === index
-                              ? 'text-white font-medium services-btn pl-[17px]'
-                              : 'text-white/50 font-extralight'
-                          }`}
-                          onClick={() => handleSlideChange(index)}
-                        />
-                      </li>
-                    ))}
-                  </ul>
+                  <ServicesList
+                    handleSlideChange={handleSlideChange}
+                    activeIndex={activeIndex}
+                    slogan={slogan}
+                  />
                 </div>
                 <p className="font-extralight leading-[20px] mx-auto h-[120px] w-[280px] flex items-end m:w-[221px] m:text-[13px] m:text-justify l:text-[18px] l:leading-[24px] l:h-[168px] l:w-[293px] l:mx-0 l:ml-auto">
                   {description}

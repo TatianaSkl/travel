@@ -26,3 +26,9 @@ export interface ContactsForm {
   email: string;
   message?: string;
 }
+
+export interface ServicesListProps {
+  handleSlideChange: (index: number) => void;
+  activeIndex: number;
+  slogan: string;
+}

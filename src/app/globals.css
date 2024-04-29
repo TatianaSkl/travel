@@ -342,6 +342,6 @@
 
 @layer utilities {
   .trans {
-    @apply transition duration-300;
+    @apply transition duration-500;
   }
 }
