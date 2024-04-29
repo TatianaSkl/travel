@@ -1,9 +1,9 @@
 'use client';
 
 import { FC } from 'react';
+import { SliderGallery } from '@/components/modules';
 import { TitleSection } from '@/components/ui-kit';
 import gallery from '@/data/gallery.json';
-import { SliderGallery } from '@/components/modules';
 
 const Gallery: FC = () => {
   return (

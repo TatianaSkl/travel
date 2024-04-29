@@ -2,8 +2,8 @@ import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { BtnSubmit } from '../ui-kit';
-import contacts from '@/data/contacts.json';
 import { ContactsForm } from '@/types';
+import contacts from '@/data/contacts.json';
 
 const FormContacts: FC = () => {
   const {

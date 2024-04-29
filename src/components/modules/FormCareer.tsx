@@ -2,8 +2,8 @@ import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { BtnSubmit } from '../ui-kit';
-import career from '@/data/career.json';
 import { CareerForm } from '@/types';
+import career from '@/data/career.json';
 
 const FormCareer: FC = () => {
   const {

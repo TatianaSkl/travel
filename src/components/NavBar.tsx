@@ -2,8 +2,8 @@
 
 import { FC } from 'react';
 import { Link } from 'react-scroll';
-import header from '@/data/header.json';
 import { NavBarProps } from '@/types';
+import header from '@/data/header.json';
 
 const NavBar: FC<NavBarProps> = ({ onClose }) => {
   return (

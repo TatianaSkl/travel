@@ -1,9 +1,9 @@
 'use client';
 
 import { FC } from 'react';
-import { Social, TitleSection } from '@/components/ui-kit';
-import contacts from '@/data/contacts.json';
 import { FormContacts } from '@/components/modules';
+import { Social } from '@/components/ui-kit';
+import contacts from '@/data/contacts.json';
 
 const Contacts: FC = () => {
   return (

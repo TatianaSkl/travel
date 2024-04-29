@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import services from '@/data/services.json';
 import { ServicesListProps } from '@/types';
+import services from '@/data/services.json';
 
 const ServicesList: FC<ServicesListProps> = ({ handleSlideChange, activeIndex, slogan }) => {
   return (

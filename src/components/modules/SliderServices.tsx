@@ -1,13 +1,13 @@
 'use client';
 
 import { FC, useRef, useState } from 'react';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade } from 'swiper/modules';
 import { TitleSection } from '@/components/ui-kit';
+import ServicesList from '../ServicesList';
 import 'swiper/css/effect-fade';
 import services from '@/data/services.json';
-import Image from 'next/image';
-import ServicesList from '../ServicesList';
 
 const SliderServices: FC = () => {
   const swiperRef = useRef<any>(null);

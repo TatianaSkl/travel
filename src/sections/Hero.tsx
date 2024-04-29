@@ -42,14 +42,14 @@ const Hero: FC = () => {
                 {hero.description}
               </p>
             </div>
-            <div className="cursor-pointer w-[280px] text-center bg-white/10 relative z-0 p-0.5 mx-auto hover:bg-white/20 focus:bg-white/20 trans m:w-[230px] m:bg-white/[.05] m:p-0 m:ml-auto m:mr-0 l:w-[293px] l:p-3">
+            <div className="cursor-pointer w-[280px] text-center bg-white/10 relative p-0.5 mx-auto hover:bg-white/20 focus:bg-white/20 trans m:w-[230px] m:bg-white/[.05] m:p-0 m:ml-auto m:mr-0 l:w-[293px] l:p-3">
               <Link
                 to="contacts"
                 spy={true}
                 smooth={true}
                 duration={500}
                 className="hero-btn text-[18px] leading-[48px] font-bold l:text-[32px]"
-                aria-label="Navigate to Contacts section"
+                aria-label="navigate to Contacts section"
               >
                 {hero.textBtn}
               </Link>
