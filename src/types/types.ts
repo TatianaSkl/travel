@@ -1,6 +1,7 @@
 export interface HeadingProps {
   text: string;
   textAccent: string;
+  id: string;
 }
 
 export interface NavBarProps {
@@ -16,9 +17,9 @@ export interface BtnProps {
 }
 
 export interface CareerForm extends ContactsForm {
-  position?: string;
   phone: string;
   policy: boolean;
+  position?: string;
 }
 
 export interface ContactsForm {

@@ -4,7 +4,7 @@ import services from '@/data/services.json';
 
 const ServicesList: FC<ServicesListProps> = ({ handleSlideChange, activeIndex, slogan }) => {
   return (
-    <ul className="flex flex-col gap-4 mb-9 m:mb-6 l:gap-6">
+    <ul role="navigation" className="flex flex-col gap-4 mb-9 m:mb-6 l:gap-6">
       {services.listText.map(({ id, title }, index) => (
         <li
           key={id}

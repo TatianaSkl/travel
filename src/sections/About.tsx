@@ -6,11 +6,20 @@ import about from '@/data/about.json';
 
 const About: FC = () => {
   return (
-    <section className="section about-bg-m m:about-bg-t l:about-bg-d" id="about">
+    <section
+      role="region"
+      aria-labelledby="aboutSectionTitle"
+      className="section about-bg-m m:about-bg-t l:about-bg-d"
+      id="about"
+    >
       <div className="container">
         <div className="m:flex m:justify-between l:justify-start l:mb-[72px]">
           <div className="mb-2 m:mb-0">
-            <TitleSection text={about.title} textAccent={about.titleAccent} />
+            <TitleSection
+              id="aboutSectionTitle"
+              text={about.title}
+              textAccent={about.titleAccent}
+            />
           </div>
           <div className="leading-5 font-extralight w-[180px] m:w-[220px] l:leading-6 l:w-[292px] l:ml-6">
             <p className="mb-5 m:mb-4 m:pt-2.5 l:pt-4 l:mb-6">

@@ -20,6 +20,14 @@ export const metadata: Metadata = {
       type: 'image/svg',
     },
   ],
+  // openGraph: {
+  //   type: 'website',
+  //   url: '/',
+  //   title: 'CarpTravel',
+  //   description: 'Uncover Carpathian’s Secrets',
+  //   siteName: 'CarpTravel',
+  //   images: [{ url: '/images/og_image.jpg' }, { url: '/images/og_image.png' }],
+  // },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

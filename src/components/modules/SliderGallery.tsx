@@ -43,15 +43,15 @@ const SliderGallery: FC = () => {
 
       <button
         type="button"
-        aria-label="button back"
-        className="btn-prev md:hidden absolute z-10 left-[37px] bottom-[17px] text-[33px] font-thin leading-[1.2] l:bottom-0 l:left-[228px]"
+        aria-label="Previous Slide"
+        className="btn-prev md:hidden absolute z-10 left-[37px] bottom-[17px] text-[33px] font-thin leading-[1.2] l:bottom-0 l:left-[228px] trans hover:scale-110 focus:scale-110"
       >
         {gallery.btnBack}
       </button>
       <button
         type="button"
-        aria-label="button next"
-        className="btn-next md:hidden absolute z-10 right-[37px] bottom-[17px] text-[33px] font-thin leading-[1.2] l:bottom-0 l:right-[228px]"
+        aria-label="Next Slide"
+        className="btn-next md:hidden absolute z-10 right-[37px] bottom-[17px] text-[33px] font-thin leading-[1.2] l:bottom-0 l:right-[228px] trans hover:scale-110 focus:scale-110"
       >
         {gallery.btnNext}
       </button>

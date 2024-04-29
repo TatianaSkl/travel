@@ -6,7 +6,11 @@ import hero from '@/data/hero.json';
 
 const Hero: FC = () => {
   return (
-    <section className="pt-[105px] pb-14 hero-bg-m m:hero-bg-t m:pt-[122px] m:pb-16 l:hero-bg-d l:pt-[130px] l:pb-[104px]">
+    <section
+      className="pt-[105px] pb-14 hero-bg-m m:hero-bg-t m:pt-[122px] m:pb-16 l:hero-bg-d l:pt-[130px] l:pb-[104px]"
+      role="region"
+      aria-labelledby="heroSectionTitle"
+    >
       <div className="container">
         <div className="text-right mb-6 m:hidden">
           <p className="uppercase text-[37px] font-thin leading-[1.2] tracking-[1.665px]">
@@ -19,7 +23,10 @@ const Hero: FC = () => {
         </div>
         <div className="m:flex m:justify-between">
           <div>
-            <h1 className="uppercase text-[40px] font-thin leading-[1.4] tracking-[-1.6px] m:leading-[1.2] m:text-[67px] m:tracking-[-2.68px] l:text-[98px] l:tracking-[-3.92px] mb-6 w-[280px] m:mb-[68px] m:w-[426px] l:w-[646px] l:mb-[148px]">
+            <h1
+              id="heroSectionTitle"
+              className="uppercase text-[40px] font-thin leading-[1.4] tracking-[-1.6px] m:leading-[1.2] m:text-[67px] m:tracking-[-2.68px] l:text-[98px] l:tracking-[-3.92px] mb-6 w-[280px] m:mb-[68px] m:w-[426px] l:w-[646px] l:mb-[148px]"
+            >
               <span className="font-medium">{hero.titleAccent}</span>
               {hero.title}
             </h1>
@@ -42,7 +49,7 @@ const Hero: FC = () => {
                 {hero.description}
               </p>
             </div>
-            <div className="cursor-pointer w-[280px] text-center bg-white/10 relative p-0.5 mx-auto hover:bg-white/20 focus:bg-white/20 trans m:w-[230px] m:bg-white/[.05] m:p-0 m:ml-auto m:mr-0 l:w-[293px] l:p-3">
+            <div className="cursor-pointer w-[280px] text-center bg-white/10 relative p-0.5 mx-auto trans hover:bg-white/20 focus:bg-white/20 m:w-[230px] m:bg-white/[.05] m:p-0 m:ml-auto m:mr-0 l:w-[293px] l:p-3">
               <Link
                 to="contacts"
                 spy={true}

@@ -7,10 +7,18 @@ import contacts from '@/data/contacts.json';
 
 const Contacts: FC = () => {
   return (
-    <section className="section contacts-bg-m m:contacts-bg-t l:contacts-bg-d" id="contacts">
+    <section
+      className="section contacts-bg-m m:contacts-bg-t l:contacts-bg-d"
+      id="contacts"
+      role="region"
+      aria-labelledby="contactsSectionTitle"
+    >
       <div className="container">
         <div className="mb-9 l:mb-[71px]">
-          <h2 className="uppercase text-[40px] font-thin leading-[1.4] tracking-[-1.6px] m:leading-[66px] m:text-[67px] m:tracking-[-2.68px] l:text-[98px] l:tracking-[-3.92px]">
+          <h2
+            id="contactsSectionTitle"
+            className="uppercase text-[40px] font-thin leading-[1.4] tracking-[-1.6px] m:leading-[66px] m:text-[67px] m:tracking-[-2.68px] l:text-[98px] l:tracking-[-3.92px]"
+          >
             {contacts.title}
             <span className="font-medium">{contacts.titleAccent}</span>
           </h2>
@@ -22,13 +30,15 @@ const Contacts: FC = () => {
                 <div className="w-[137px] m:w-[157px] l:w-[176px]">
                   <a
                     href="tel:+380981234567"
-                    className="leading-[24px] hover:underline focus:underline trans"
+                    className="leading-[24px] trans hover:underline focus:underline"
+                    aria-label={`Call ${contacts.phone.numbers[0]}`}
                   >
                     {contacts.phone.numbers[0]}
                   </a>
                   <a
                     href="tel:+380731234567"
-                    className="leading-[24px] hover:underline focus:underline trans"
+                    className="leading-[24px] trans hover:underline focus:underline"
+                    aria-label={`Call ${contacts.phone.numbers[1]}`}
                   >
                     {contacts.phone.numbers[1]}
                   </a>
@@ -40,7 +50,8 @@ const Contacts: FC = () => {
               <div className="flex gap-5 justify-end mb-6 m:mb-0">
                 <a
                   href={`mailto:${contacts.email.address}`}
-                  className="leading-[24px] hover:underline focus:underline trans"
+                  className="leading-[24px] trans hover:underline focus:underline"
+                  aria-label={`Send email to ${contacts.email.address}`}
                 >
                   {contacts.email.address}
                 </a>

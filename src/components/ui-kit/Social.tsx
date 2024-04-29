@@ -7,15 +7,15 @@ const Social: FC = () => {
       <p className="text-[12px] font-extralight leading-[20px] pt-[2px] l:pr-[30px]">
         {contacts.social.title}
       </p>
-      <ul className="w-[81px]">
+      <ul role="navigation" className="w-[81px]">
         {contacts.social.links.map(({ id, title, link }) => (
           <li key={id}>
             <a
               href={link}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              aria-label={`Visit ${title}`}
-              className="leading-[24px] hover:underline focus:underline trans"
+              aria-label={`Visit ${title} website`}
+              className="leading-[24px] trans hover:underline focus:underline"
             >
               {title}
             </a>

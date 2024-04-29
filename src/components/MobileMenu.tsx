@@ -18,7 +18,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ onClose }) => {
   }, [onClose]);
 
   return (
-    <div className="modal m:hidden">
+    <div role="dialog" aria-modal="true" className="modal m:hidden">
       <button
         type="button"
         aria-label="Button close navigete menu"
