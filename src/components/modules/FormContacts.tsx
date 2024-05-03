@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import useFormPersist from 'react-hook-form-persist';
 import toast from 'react-hot-toast';
-import { BtnSubmit } from '../ui-kit';
 import { ContactsForm } from '@/types';
 import contacts from '@/data/contacts.json';
 
@@ -11,7 +11,14 @@ const FormContacts: FC = () => {
     handleSubmit,
     reset,
     formState: { errors },
+    setValue,
+    watch,
   } = useForm<ContactsForm>();
+
+  useFormPersist('contactsForm', {
+    watch,
+    setValue,
+  });
 
   const submit: SubmitHandler<ContactsForm> = () => {
     toast.success('Your data has been sent successfully!');
@@ -19,8 +26,8 @@ const FormContacts: FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(submit)} className="md:w-[280px] mx-auto">
-      <div className="m:flex m:gap-5 l:flex-col">
+    <form onSubmit={handleSubmit(submit)} className="md:max-w-[480px] mx-auto l:pt-[3px]">
+      <div className="m:flex m:gap-5 l:flex-col l:gap-0">
         <div className="flex flex-col gap-6 mb-6 m:mb-0 m:gap-7 l:flex-row l:mb-10 l:gap-5">
           <div className={`flex flex-col gap-1 relative ${errors.fullName ? 'text-red' : ''}`}>
             <label htmlFor="fullName" className="label-form">
@@ -81,7 +88,7 @@ const FormContacts: FC = () => {
             )}
           </div>
         </div>
-        <div className="flex flex-col gap-1 mb-4">
+        <div className="flex flex-col gap-1">
           <label htmlFor="message" className="label-form">
             {contacts.form.message.label}
           </label>
@@ -92,7 +99,13 @@ const FormContacts: FC = () => {
           ></textarea>
         </div>
       </div>
-      <BtnSubmit text={contacts.btnSubmit} />
+      <button
+        type="submit"
+        aria-label="submit form"
+        className="flex uppercase text-[30px] font-medium leading-[1.2] w-[82px] h-[52px] ml-auto items-end l:h-[63px] l:text-[32px] l:w-[87px] trans hover:underline focus:underline"
+      >
+        {contacts.btnSubmit}
+      </button>
     </form>
   );
 };

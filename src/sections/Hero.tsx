@@ -17,7 +17,7 @@ const Hero: FC = () => {
             <span className="font-medium">{hero.slogan[0]}</span>
             {hero.slogan[1]}
           </p>
-          <p className="uppercase text-[12px] font-light leading-[1.2] tracking-[9.48px]">
+          <p className="uppercase text-[12px] font-light leading-[1.2] tracking-[9.48px] mr-[-5px]">
             {hero.slogan[2]}
           </p>
         </div>
@@ -35,12 +35,12 @@ const Hero: FC = () => {
             </p>
           </div>
           <div>
-            <div className="md:hidden m:ml-auto m:mb-14 m:w-[230px] l:w-[325px] l:mb-[181px]">
-              <p className="uppercase font-thin leading-[1.2] m:text-[67px] m:tracking-[8.71px] l:text-[98px]">
+            <div className="md:hidden m:ml-auto m:mb-14 m:w-[230px] l:w-[305px] l:mb-[181px]">
+              <p className="uppercase font-thin leading-[1.2] m:text-[67px] m:tracking-[8.1px] l:text-[98px] l:tracking-normal l:text-right">
                 <span className="font-medium">{hero.slogan[0]}</span>
                 {hero.slogan[1]}
               </p>
-              <p className="uppercase font-light leading-[1.2] m:text-[14px] m:tracking-[25.9px] l:text-[16px] l:tracking-[36.48px]">
+              <p className="uppercase font-light leading-[1.2] ml-[6px] m:text-[14px] m:tracking-[25.9px] l:text-[16px] l:tracking-[35px] l:ml-[14px]">
                 {hero.slogan[2]}
               </p>
             </div>
@@ -49,13 +49,14 @@ const Hero: FC = () => {
                 {hero.description}
               </p>
             </div>
-            <div className="cursor-pointer w-[280px] text-center bg-white/10 relative p-0.5 mx-auto trans hover:bg-white/20 focus:bg-white/20 m:w-[230px] m:bg-white/[.05] m:p-0 m:ml-auto m:mr-0 l:w-[293px] l:p-3">
+            <div className="cursor-pointer text-center bg-white/10 relative p-0.5 mx-auto trans hover:bg-white/20 focus:bg-white/20 md:max-w-[480px] m:w-[230px] m:h-[50px] m:flex-container m:bg-white/[.05] m:p-0 m:ml-auto m:mr-0 l:w-[293px] l:h-[71px]">
               <Link
                 to="contacts"
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="hero-btn text-[18px] leading-[48px] font-bold l:text-[32px]"
+                href=""
+                className="hero-btn text-[18px] leading-[48px] font-bold py-[18px] px-16 m:py-3.5 m:leading-[1.2] l:text-[32px]"
                 aria-label="navigate to Contacts section"
               >
                 {hero.textBtn}

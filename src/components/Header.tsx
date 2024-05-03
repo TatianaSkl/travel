@@ -29,7 +29,7 @@ const Header: FC = () => {
               aria-label="Button open navigete menu"
               aria-expanded={modalState ? 'true' : 'false'}
               onClick={onOpenModal}
-              className="h-10 leading-[1.2] tracking-[1.4px] hover:underline focus:underline trans"
+              className="h-10 leading-[1.2] tracking-[1.4px] pl-2 hover:underline focus:underline trans"
             >
               MENU
             </button>

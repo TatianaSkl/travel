@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import useFormPersist from 'react-hook-form-persist';
 import toast from 'react-hot-toast';
 import { BtnSubmit } from '../ui-kit';
 import { CareerForm } from '@/types';
@@ -11,7 +12,15 @@ const FormCareer: FC = () => {
     handleSubmit,
     reset,
     formState: { errors },
+    setValue,
+    watch,
   } = useForm<CareerForm>();
+
+  useFormPersist('careerForm', {
+    watch,
+    setValue,
+    exclude: ['policy'],
+  });
 
   const submit: SubmitHandler<CareerForm> = () => {
     toast.success('Your data has been sent successfully!');
@@ -19,7 +28,7 @@ const FormCareer: FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(submit)} className="w-[280px] mx-auto">
+    <form onSubmit={handleSubmit(submit)} className="md:max-w-[480px] mx-auto">
       <div className="m:flex m:gap-5 l:gap-6">
         <div className="flex flex-col gap-4 mb-4 m:mb-[9px] l:gap-6 l:mb-6">
           <div className={`flex flex-col gap-1 relative ${errors.fullName ? 'text-red' : ''}`}>
@@ -105,7 +114,7 @@ const FormCareer: FC = () => {
                 {...register('phone', {
                   required: true,
                   pattern: {
-                    value: /^\(\d{3}\) \d{2} \d{2} \d{3}$/,
+                    value: /^\d{10}$/,
                     message: 'Incorrect phone',
                   },
                 })}
@@ -138,9 +147,7 @@ const FormCareer: FC = () => {
         </div>
       </div>
       <div className="m:flex m:items-start m:w-[460px] l:w-[606px]">
-        <div
-          className={`mb-4 relative m:mb-0 m:mt-[7px] l:mt-3 ${errors.policy ? 'text-red' : ''}`}
-        >
+        <div className={`relative m:mt-[7px] l:mt-3 ${errors.policy ? 'text-red' : ''}`}>
           <input
             id="policy"
             type="checkbox"

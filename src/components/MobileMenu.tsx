@@ -23,7 +23,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ onClose }) => {
         type="button"
         aria-label="Button close navigete menu"
         onClick={onClose}
-        className="absolute top-[36px] right-[20px] h-10 leading-[1.2] tracking-[1.4px] hover:underline focus:underline trans"
+        className="absolute top-[36px] right-[20px] h-10 leading-[1.2] tracking-[1.4px] pl-2 hover:underline focus:underline trans"
       >
         CLOSE
       </button>

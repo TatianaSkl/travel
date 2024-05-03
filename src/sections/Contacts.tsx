@@ -8,7 +8,7 @@ import contacts from '@/data/contacts.json';
 const Contacts: FC = () => {
   return (
     <section
-      className="section contacts-bg-m m:contacts-bg-t l:contacts-bg-d"
+      className="section pb-[54px] m:pb-[64px] l:pb-[104px] contacts-bg-m m:contacts-bg-t l:contacts-bg-d"
       id="contacts"
       role="region"
       aria-labelledby="contactsSectionTitle"
@@ -17,7 +17,7 @@ const Contacts: FC = () => {
         <div className="mb-9 l:mb-[71px]">
           <h2
             id="contactsSectionTitle"
-            className="uppercase text-[40px] font-thin leading-[1.4] tracking-[-1.6px] m:leading-[66px] m:text-[67px] m:tracking-[-2.68px] l:text-[98px] l:tracking-[-3.92px]"
+            className="uppercase text-[40px] font-thin leading-[1.4] tracking-[-1.6px] m:leading-[66px] m:text-[67px] m:tracking-[-2.68px] l:text-[98px] l:tracking-[-3.92px] l:leading-[1.2]"
           >
             {contacts.title}
             <span className="font-medium">{contacts.titleAccent}</span>

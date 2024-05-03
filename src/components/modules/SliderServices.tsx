@@ -21,7 +21,7 @@ const SliderServices: FC = () => {
   };
 
   return (
-    <Swiper effect={'fade'} modules={[EffectFade]} ref={swiperRef}>
+    <Swiper effect={'fade'} modules={[EffectFade]} ref={swiperRef} slidesPerView={1}>
       {services.slider.map(({ id, url, src, alt, date, slogan, description }) => (
         <SwiperSlide
           key={id}
@@ -62,7 +62,7 @@ const SliderServices: FC = () => {
                     slogan={slogan}
                   />
                 </div>
-                <p className="font-extralight leading-[20px] mx-auto h-[120px] w-[280px] flex items-end m:w-[221px] m:text-[13px] m:text-justify l:text-[18px] l:leading-[24px] l:h-[168px] l:w-[293px] l:mx-0 l:ml-auto">
+                <p className="font-extralight leading-[20px] mx-auto h-[120px] flex items-end m:w-[221px] m:text-[13px] m:text-justify l:text-[18px] l:leading-[24px] l:h-[168px] l:w-[293px] l:mx-0 l:ml-auto">
                   {description}
                 </p>
               </div>

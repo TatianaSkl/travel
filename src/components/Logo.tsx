@@ -3,7 +3,12 @@ import Image from 'next/image';
 
 const Logo: FC = () => {
   return (
-    <a href="/" title="Go to homepage" className="trans hover:scale-125 focus:scale-125">
+    <a
+      href="/"
+      title="Go to homepage"
+      aria-label="logo company"
+      className="trans hover:scale-125 focus:scale-125"
+    >
       <Image
         src="/icons/logo.svg"
         alt="logo company"

@@ -86,16 +86,7 @@
         rgba(2, 15, 8, 0.75) 287px,
         rgba(2, 15, 8, 0.5)
       ),
-      url(/images/hero_m.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          to bottom,
-          rgba(2, 15, 8, 0.5),
-          rgba(2, 15, 8, 0.75) 287px,
-          rgba(2, 15, 8, 0.5)
-        ),
-        url(/images/hero_m_2x.jpg);
-    }
+      image-set(url(/images/hero_m.jpg) 1x, url(/images/hero_m_2x.jpg) 2x);
   }
 
   .hero-bg-t {
@@ -106,26 +97,13 @@
         rgba(2, 15, 8, 0.75) 287px,
         rgba(2, 15, 8, 0.5)
       ),
-      url(/images/hero_t.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          to bottom,
-          rgba(2, 15, 8, 0.5),
-          rgba(2, 15, 8, 0.75) 287px,
-          rgba(2, 15, 8, 0.5)
-        ),
-        url(/images/hero_t_2x.jpg);
-    }
+      image-set(url(/images/hero_t.jpg) 1x, url(/images/hero_t_2x.jpg) 2x);
   }
 
   .hero-bg-d {
     height: 763px;
     background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
-      url(/images/hero_d.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
-        url(/images/hero_d_2x.jpg);
-    }
+      image-set(url(/images/hero_d.jpg) 1x, url(/images/hero_d_2x.jpg) 2x);
   }
 
   .hero-btn::before {
@@ -183,16 +161,7 @@
         rgba(2, 15, 8, 0.75) 247px,
         rgba(2, 15, 8, 0.5)
       ),
-      url(/images/about_m.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          to bottom,
-          rgba(2, 15, 8, 0.5),
-          rgba(2, 15, 8, 0.75) 247px,
-          rgba(2, 15, 8, 0.5)
-        ),
-        url(/images/about_m_2x.jpg);
-    }
+      image-set(url(/images/about_m.jpg) 1x, url(/images/about_m_2x.jpg) 2x);
   }
 
   .about-bg-t {
@@ -203,16 +172,7 @@
         rgba(2, 15, 8, 0.75) 247px,
         rgba(2, 15, 8, 0.5)
       ),
-      url(/images/about_t.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          to bottom,
-          rgba(2, 15, 8, 0.5),
-          rgba(2, 15, 8, 0.75) 247px,
-          rgba(2, 15, 8, 0.5)
-        ),
-        url(/images/about_t_2x.jpg);
-    }
+      image-set(url(/images/about_t.jpg) 1x, url(/images/about_t_2x.jpg) 2x);
   }
 
   .about-bg-d {
@@ -223,16 +183,7 @@
         rgba(2, 15, 8, 0.75) 257px,
         rgba(2, 15, 8, 0.5)
       ),
-      url(/images/about_d.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          to bottom,
-          rgba(2, 15, 8, 0.5),
-          rgba(2, 15, 8, 0.75) 257px,
-          rgba(2, 15, 8, 0.5)
-        ),
-        url(/images/about_d_2x.jpg);
-    }
+      image-set(url(/images/about_d.jpg) 1x, url(/images/about_d_2x.jpg) 2x);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 
@@ -249,26 +200,20 @@
   }
 
   .career-bg-m {
-    background-image: var(--bgGradient), url(/images/career_m.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: var(--bgGradient), url(/images/career_m_2x.jpg);
-    }
+    background-image: var(--bgGradient),
+      image-set(url(/images/career_m.jpg) 1x, url(/images/career_m_2x.jpg) 2x);
   }
 
   .career-bg-t {
     height: 720px;
-    background-image: var(--bgGradient), url(/images/career_t.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: var(--bgGradient), url(/images/career_t_2x.jpg);
-    }
+    background-image: var(--bgGradient),
+      image-set(url(/images/career_t.jpg) 1x, url(/images/career_t_2x.jpg) 2x);
   }
 
   .career-bg-d {
     height: 818px;
-    background-image: var(--bgGradient), url(/images/career_d.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: var(--bgGradient), url(/images/career_d_2x.jpg);
-    }
+    background-image: var(--bgGradient),
+      image-set(url(/images/career_d.jpg) 1x, url(/images/career_d_2x.jpg) 2x);
   }
 
   .input-form {
@@ -283,6 +228,11 @@
     width: 22px;
     height: 22px;
     background-image: url('/icons/checked.svg');
+  }
+
+  .input-checkbox:focus + label::before,
+  .input-checkbox:hover + label::before {
+    outline: 2px solid white;
   }
 
   .label-checkbox::before {
@@ -320,10 +270,8 @@
   }
 
   .gallery-bg-m {
-    background-image: var(--bgGradient), url(/images/gallery_bg_m.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: var(--bgGradient), url(/images/gallery_bg_m_2x.jpg);
-    }
+    background-image: var(--bgGradient),
+      image-set(url(/images/gallery_bg_m.jpg) 1x, url(/images/gallery_bg_m_2x.jpg) 2x);
   }
 
   .gallery-bg-t {
@@ -336,18 +284,7 @@
         rgba(2, 15, 8, 0.75) 328px,
         rgba(2, 15, 8, 0.85) 100%
       ),
-      url(/images/gallery_bg_t.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          to bottom,
-          rgba(2, 15, 8, 0.85) 0,
-          rgba(2, 15, 8, 0.75) 247px,
-          rgba(2, 15, 8, 0.85) 247px,
-          rgba(2, 15, 8, 0.75) 328px,
-          rgba(2, 15, 8, 0.85) 100%
-        ),
-        url(/images/gallery_bg_t_2x.jpg);
-    }
+      image-set(url(/images/gallery_bg_t.jpg) 1x, url(/images/gallery_bg_t_2x.jpg) 2x);
   }
 
   .gallery-bg-d {
@@ -360,18 +297,7 @@
         rgba(2, 15, 8, 0.75) 485px,
         rgba(2, 15, 8, 0.85) 100%
       ),
-      url(/images/gallery_bg_d.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          to bottom,
-          rgba(2, 15, 8, 0.85) 0,
-          rgba(2, 15, 8, 0.75) 303px,
-          rgba(2, 15, 8, 0.85) 303px,
-          rgba(2, 15, 8, 0.75) 485px,
-          rgba(2, 15, 8, 0.85) 100%
-        ),
-        url(/images/gallery_bg_d_2x.jpg);
-    }
+      image-set(url(/images/gallery_bg_d.jpg) 1x, url(/images/gallery_bg_d_2x.jpg) 2x);
   }
 
   @media (min-width: 768px) {
@@ -409,30 +335,28 @@
   }
 
   .contacts-bg-m {
-    background-image: var(--bgGradient), url(/images/contacts_m.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: var(--bgGradient), url(/images/contacts_m_2x.jpg);
-    }
+    background-image: var(--bgGradient),
+      image-set(url(/images/contacts_m.jpg) 1x, url(/images/contacts_m_2x.jpg) 2x);
   }
 
   .contacts-bg-t {
     height: 691px;
-    background-image: var(--bgGradient), url(/images/contacts_t.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: var(--bgGradient), url(/images/contacts_t_2x.jpg);
-    }
+    background-image: var(--bgGradient),
+      image-set(url(/images/contacts_t.jpg) 1x, url(/images/contacts_t_2x.jpg) 2x);
   }
 
   .contacts-bg-d {
     height: 762px;
-    background-image: var(--bgGradient), url(/images/contacts_d.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: var(--bgGradient), url(/images/contacts_d_2x.jpg);
-    }
+    background-image: var(--bgGradient),
+      image-set(url(/images/contacts_d.jpg) 1x, url(/images/contacts_d_2x.jpg) 2x);
   }
 }
 
 @layer utilities {
+  .flex-container {
+    @apply flex justify-center items-center;
+  }
+
   .trans {
     @apply transition-all duration-300;
   }
