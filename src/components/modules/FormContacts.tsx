@@ -29,72 +29,68 @@ const FormContacts: FC = () => {
     <form onSubmit={handleSubmit(submit)} className="md:max-w-[480px] mx-auto l:pt-[3px]">
       <div className="m:flex m:gap-5 l:flex-col l:gap-0">
         <div className="flex flex-col gap-6 mb-6 m:mb-0 m:gap-7 l:flex-row l:mb-10 l:gap-5">
-          <div className={`flex flex-col gap-1 relative ${errors.fullName ? 'text-red' : ''}`}>
-            <label htmlFor="fullName" className="label-form">
-              {contacts.form.fullName.label}
+          <div
+            className={`flex flex-col gap-1 relative ${errors.fullNameContacts ? 'text-red' : ''}`}
+          >
+            <label htmlFor="fullNameContacts" className="label-form">
+              {contacts.form.fullNameContacts.label}
             </label>
             <input
-              id="fullName"
+              id="fullNameContacts"
               type="text"
-              placeholder={contacts.form.fullName.placeholder}
-              {...register('fullName', {
+              placeholder={contacts.form.fullNameContacts.placeholder}
+              {...register('fullNameContacts', {
                 required: true,
                 pattern: {
                   value: /^[a-zA-Zа-яА-Я]+(?:\s+[a-zA-Zа-яА-Я]+)+$/,
-                  message: `${contacts.form.fullName.error}`,
+                  message: `${contacts.form.fullNameContacts.error}`,
                 },
               })}
               className={`input-form pl-2 l:py-0.5 l:w-[293px] ${
-                errors.fullName ? 'text-red' : ''
+                errors.fullNameContacts ? 'text-red' : ''
               }`}
-              aria-invalid={errors.fullName ? 'true' : 'false'}
-              aria-describedby="fullNameError"
+              aria-invalid={errors.fullNameContacts ? 'true' : 'false'}
             />
-            {errors.fullName && (
-              <span
-                id="fullNameError"
-                className="error absolute bottom-[-22px] right-0 text-red text-[12px] font-extralight leading-[24px] tracking-[2.4px]"
-              >
-                {errors.fullName.message || 'Required'}
+            {errors.fullNameContacts && (
+              <span className="error absolute bottom-[-22px] right-0 text-red text-[12px] font-extralight leading-[24px] tracking-[2.4px]">
+                {errors.fullNameContacts.message || 'Required'}
               </span>
             )}
           </div>
-          <div className={`flex flex-col gap-1 relative ${errors.email ? 'text-red' : ''}`}>
-            <label htmlFor="email" className="label-form">
-              {contacts.form.email.label}
+          <div className={`flex flex-col gap-1 relative ${errors.emailContacts ? 'text-red' : ''}`}>
+            <label htmlFor="emailContacts" className="label-form">
+              {contacts.form.emailContacts.label}
             </label>
             <input
-              id="email"
+              id="emailContacts"
               type="text"
-              placeholder={contacts.form.email.placeholder}
-              {...register('email', {
+              placeholder={contacts.form.emailContacts.placeholder}
+              {...register('emailContacts', {
                 required: true,
                 pattern: {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                  message: `${contacts.form.email.error}`,
+                  message: `${contacts.form.emailContacts.error}`,
                 },
               })}
-              className={`input-form pl-2 l:py-0.5 l:w-[293px] ${errors.email ? 'text-red' : ''}`}
-              aria-invalid={errors.email ? 'true' : 'false'}
-              aria-describedby="emailError"
+              className={`input-form pl-2 l:py-0.5 l:w-[293px] ${
+                errors.emailContacts ? 'text-red' : ''
+              }`}
+              aria-invalid={errors.emailContacts ? 'true' : 'false'}
             />
-            {errors.email && (
-              <span
-                id="emailError"
-                className="error absolute bottom-[-22px] right-0 text-red text-[12px] font-extralight leading-[24px] tracking-[2.4px]"
-              >
-                {errors.email.message || 'Required'}
+            {errors.emailContacts && (
+              <span className="error absolute bottom-[-22px] right-0 text-red text-[12px] font-extralight leading-[24px] tracking-[2.4px]">
+                {errors.emailContacts.message || 'Required'}
               </span>
             )}
           </div>
         </div>
         <div className="flex flex-col gap-1">
-          <label htmlFor="message" className="label-form">
-            {contacts.form.message.label}
+          <label htmlFor="messageContacts" className="label-form">
+            {contacts.form.messageContacts.label}
           </label>
           <textarea
-            id="message"
-            {...register('message')}
+            id="messageContacts"
+            {...register('messageContacts')}
             className="input-form px-2 resize-none h-[196px] m:w-[463px] m:h-[221px] l:w-[607px] l:h-[174px]"
           ></textarea>
         </div>

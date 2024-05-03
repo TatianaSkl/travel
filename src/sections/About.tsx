@@ -7,7 +7,6 @@ import about from '@/data/about.json';
 const About: FC = () => {
   return (
     <section
-      role="region"
       aria-labelledby="aboutSectionTitle"
       className="section about-bg-m m:about-bg-t l:about-bg-d"
       id="about"

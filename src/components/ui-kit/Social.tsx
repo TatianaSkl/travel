@@ -7,7 +7,7 @@ const Social: FC = () => {
       <p className="text-[12px] font-extralight leading-[20px] pt-[2px] l:pr-[30px]">
         {contacts.social.title}
       </p>
-      <ul role="navigation" className="w-[81px]">
+      <ul className="w-[81px]">
         {contacts.social.links.map(({ id, title, link }) => (
           <li key={id}>
             <a

@@ -10,7 +10,6 @@ const Gallery: FC = () => {
     <section
       className="section gallery-bg-m m:gallery-bg-t l:gallery-bg-d"
       id="gallery"
-      role="region"
       aria-labelledby="gallerySectionTitle"
     >
       <div className="container l:px-0">

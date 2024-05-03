@@ -29,14 +29,10 @@ const SliderServices: FC = () => {
             background: `linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),url(${url}) lightgray 80% / cover no-repeat`,
           }}
         >
-          <div className="section container" role="region" aria-labelledby="servicesSectionTitle">
+          <div className="section container">
             <div className="m:flex m:justify-between l:justify-normal l:gap-[162px]">
               <div className="mb-6 m:mb-9 l:mb-6">
-                <TitleSection
-                  id="servicesSectionTitle"
-                  text={services.title}
-                  textAccent={services.titleAccent}
-                />
+                <TitleSection text={services.title} textAccent={services.titleAccent} />
               </div>
               <div className="flex text-[43px] font-thin leading-[1.2] justify-end mb-4 m:mb-0 m:text-[67px] m:leading-[78px] m:pr-[54px] l:text-[98px]">
                 <p>{date[0]}</p>

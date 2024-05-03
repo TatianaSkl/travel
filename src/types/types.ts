@@ -1,7 +1,7 @@
 export interface HeadingProps {
   text: string;
   textAccent: string;
-  id: string;
+  id?: string;
 }
 
 export interface NavBarProps {
@@ -16,16 +16,19 @@ export interface BtnProps {
   text: string;
 }
 
-export interface CareerForm extends ContactsForm {
+export interface CareerForm {
+  fullName: string;
+  email: string;
   phone: string;
   policy: boolean;
+  message?: string;
   position?: string;
 }
 
 export interface ContactsForm {
-  fullName: string;
-  email: string;
-  message?: string;
+  fullNameContacts: string;
+  emailContacts: string;
+  messageContacts?: string;
 }
 
 export interface ServicesListProps {

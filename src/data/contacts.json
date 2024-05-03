@@ -35,17 +35,17 @@
     ]
   },
   "form": {
-    "fullName": {
+    "fullNameContacts": {
       "label": "Full name",
       "placeholder": "John Smith",
       "error": "Incorrect name"
     },
-    "email": {
+    "emailContacts": {
       "label": "E-mail",
       "placeholder": "johnsmith@email.com",
       "error": "Invalid email"
     },
-    "message": {
+    "messageContacts": {
       "label": "Message"
     }
   },

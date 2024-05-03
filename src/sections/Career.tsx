@@ -7,15 +7,11 @@ import career from '@/data/career.json';
 
 const Career: FC = () => {
   return (
-    <section id="career" role="region" aria-labelledby="careerSectionTitle">
+    <section id="career" aria-labelledby="careerSectionTitle">
       <div className="section career-bg-m m:hidden">
         <div className="container">
           <div className="mb-6">
-            <TitleSection
-              text={career.title}
-              textAccent={career.titleAccent}
-              id="careerSectionTitle"
-            />
+            <TitleSection text={career.title} textAccent={career.titleAccent} />
           </div>
           <p className="w-[179px] ml-auto mb-9 font-extralight leading-[20px]">
             {career.description}

@@ -10,7 +10,6 @@ const Contacts: FC = () => {
     <section
       className="section pb-[54px] m:pb-[64px] l:pb-[104px] contacts-bg-m m:contacts-bg-t l:contacts-bg-d"
       id="contacts"
-      role="region"
       aria-labelledby="contactsSectionTitle"
     >
       <div className="container">

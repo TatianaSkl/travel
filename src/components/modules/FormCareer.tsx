@@ -48,13 +48,9 @@ const FormCareer: FC = () => {
               })}
               className={`input-form pl-2 l:py-0.5 ${errors.fullName ? 'text-red' : ''}`}
               aria-invalid={errors.fullName ? 'true' : 'false'}
-              aria-describedby="fullNameError"
             />
             {errors.fullName && (
-              <span
-                id="fullNameError"
-                className="error absolute bottom-[-22px] right-0 text-red text-[12px] font-extralight leading-[24px] tracking-[2.4px]"
-              >
+              <span className="error absolute bottom-[-22px] right-0 text-red text-[12px] font-extralight leading-[24px] tracking-[2.4px]">
                 {errors.fullName.message || 'Required'}
               </span>
             )}
@@ -76,13 +72,9 @@ const FormCareer: FC = () => {
               })}
               className={`input-form pl-2 l:py-0.5 ${errors.email ? 'text-red' : ''}`}
               aria-invalid={errors.email ? 'true' : 'false'}
-              aria-describedby="emailError"
             />
             {errors.email && (
-              <span
-                id="emailError"
-                className="error absolute bottom-[-22px] right-0 text-red text-[12px] font-extralight leading-[24px] tracking-[2.4px]"
-              >
+              <span className="error absolute bottom-[-22px] right-0 text-red text-[12px] font-extralight leading-[24px] tracking-[2.4px]">
                 {errors.email.message || 'Required'}
               </span>
             )}
@@ -122,13 +114,9 @@ const FormCareer: FC = () => {
                   errors.phone ? 'text-red' : ''
                 }`}
                 aria-invalid={errors.phone ? 'true' : 'false'}
-                aria-describedby="phoneError"
               />
               {errors.phone && (
-                <span
-                  id="phoneError"
-                  className="error absolute bottom-[-22px] right-0 text-red text-[12px] font-extralight leading-[24px] tracking-[2.4px]"
-                >
+                <span className="error absolute bottom-[-22px] right-0 text-red text-[12px] font-extralight leading-[24px] tracking-[2.4px]">
                   {errors.phone.message || 'Required'}
                 </span>
               )}
